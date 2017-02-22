@@ -18,19 +18,7 @@
 #define ENTERDUAL CTL_T(KC_ENT)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-  /* Keymap _BL: (Base Layer) Default Layer
-   * ,-----------------------------------------------------------.
-   * |Esc~| 1|  2|  3|  4|  5|  6|  7|  8|  9|  0|  -|  =|Backsp |
-   * |-----------------------------------------------------------|
-   * |Tab  |  Q|  W|  E|  R|  T|  Y|  U|  I|  O|  P|  [|  ]|  \  |
-   * |-----------------------------------------------------------|
-   * |CAPS   |  A|  S|  D|  F|  G|  H|  J|  K|  L|  ;|  '|Return |
-   * |-----------------------------------------------------------|
-   * |Shift   |  Z|  X|  C|  V|  B|  N|  M|  ,|  .|  /|Shift     |
-   * |-----------------------------------------------------------|
-   * |Ctrl|Gui |Alt |      Space            |Alt |Gui |FN  |Ctrl |
-   * `-----------------------------------------------------------'
-   */
+  /* Keymap _BL: (Base Layer) Default Layer */
 [_BL] = KEYMAP_ANSI(
   F(0),      KC_1,   KC_2,   KC_3,   KC_4,   KC_5,   KC_6,   KC_7,   KC_8,     KC_9,    KC_0,    KC_MINS,  KC_EQL,   KC_BSPC, \
   KC_TAB,    KC_Q,   KC_W,   KC_E,   KC_R,   KC_T,   KC_Y,   KC_U,   KC_I,     KC_O,    KC_P,    KC_LBRC,  KC_RBRC,  KC_BSLS, \
@@ -38,22 +26,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_LSFT,   KC_Z,   KC_X,   KC_C,   KC_V,   KC_B,   KC_N,   KC_M,   KC_COMM,  KC_DOT,  KC_SLSH,                     KC_RSFT, \
   MO(_FL), KC_LGUI,KC_LALT,                          KC_SPC,                            KC_RALT, MO(_SL),  KC_RGUI,  KC_RCTL),
 
-  /* Keymap _FL: Function Layer
-   * ,-----------------------------------------------------------.
-   * |   |   |   |   |   |   |   |   |   |   |   |   |   |  RESET|
-   * |-----------------------------------------------------------|
-   * |     |   |   |   |   |   |   |   |   |   |   |BL-|BL+|BL   |
-   * |-----------------------------------------------------------|
-   * |      |   |   |   |   |   |   |       |   |   |   |        |
-   * |-----------------------------------------------------------|
-   * |        | F1|F2 | F3|F4 | F5| F6| F7| F8|   |   |          |
-   * |-----------------------------------------------------------|
-   * |    |    |    |                        |    |    |    |    |
-   * `-----------------------------------------------------------'
-   */
+  /* Keymap _FL: Function Layer */
 [_FL] = KEYMAP_ANSI(
   KC_GRV,   KC_F1,    KC_F2,    KC_F3,     KC_F4,    KC_F5,    KC_F6,    KC_F7,          KC_F8,        KC_F9,          KC_F10,   KC_F11,  KC_F12,  KC_DEL,  \
-  KC_TRNS,  KC_ESC,   LCTL(LSFT(KC_J)),  LCTL(LSFT(KC_SCLN)),   KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_PGUP,        KC_PGUP,      KC_TRNS,        KC_HOME,   KC_MPRV, KC_MNXT, KC_MPLY, \
+  KC_TRNS,  KC_ESC,   LCTL(LSFT(KC_J)),  LCTL(LSFT(KC_SCLN)),   KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_PGUP,        KC_INS,      KC_TRNS,        KC_HOME,   KC_MPRV, KC_MNXT, KC_MPLY, \
   KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_PGDN,   KC_TRNS,  KC_TRNS,  KC_LEFT,  KC_DOWN,        KC_UP,        KC_RIGHT,       KC_TRNS,  KC_TRNS,          KC_TRNS, \
   KC_TRNS,  KC_TRNS,  KC_TRNS,  BL_DEC,    BL_TOGG,  BL_INC,   KC_END,   KC_ENT,  KC_BSPC, LCTL(KC_A), KC_TRNS,                    RESET,   \
   KC_TRNS,  KC_TRNS,  F(9),                                    KC_TRNS,                                                KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS),
@@ -66,10 +42,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   MO(_FL), KC_LGUI,KC_LALT,                          KC_SPC,                            KC_RALT, MO(_SL),  KC_RGUI,  KC_RCTL),
 
 [_SL] = KEYMAP_ANSI(
-  KC_GRV,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,         KC_F7,               KC_F8,              KC_F9,                KC_F10,       KC_F11,  KC_F12,  KC_DEL,  \
-  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,       KC_PGDN,             KC_PGUP,            KC_TRNS,              LSFT(KC_END), KC_MPRV, KC_MNXT, KC_MPLY, \
-  KC_TRNS, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,          KC_7,                KC_8,               KC_9,                 KC_0,      KC_TRNS,          KC_TRNS, \
-  KC_TRNS, KC_TRNS, KC_TRNS, BL_DEC,  BL_TOGG, BL_INC,  LSFT(KC_HOME), LCTL(LSFT(KC_LEFT)), LCTL(LSFT(KC_END)), LCTL(LSFT(KC_RIGHT)), KC_TRNS,                        RESET,   \
+  KC_GRV,  KC_F1,   KC_F2, KC_F3,   KC_F4,   KC_F5,   KC_F6,         KC_F7,           KC_F8,   KC_F9,   KC_F10,       KC_F11,  KC_F12,  KC_DEL,  \
+  KC_TRNS, KC_6,    KC_7,  KC_8, KC_9, KC_0, KC_EQL , KC_PGDN, KC_PGUP,            KC_TRNS,              LSFT(KC_END), KC_MPRV, KC_MNXT, KC_MPLY, \
+  KC_TRNS, KC_1,    KC_2,  KC_3, KC_4, KC_5, KC_MINS, KC_7,    KC_8,               KC_9,                 KC_0,      KC_TRNS,          KC_TRNS, \
+  KC_TRNS, KC_MINS, KC_EQL, BL_DEC,  BL_TOGG, BL_INC,  LSFT(KC_HOME), LCTL(LSFT(KC_LEFT)), LCTL(LSFT(KC_END)), LCTL(LSFT(KC_RIGHT)), KC_TRNS,                        RESET,   \
   KC_TRNS, KC_TRNS, KC_TRNS,                            KC_TRNS,                                                                      KC_TRNS,      KC_TRNS, KC_TRNS, KC_TRNS),
 };
 
