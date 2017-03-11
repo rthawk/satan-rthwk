@@ -15,7 +15,7 @@
 #define _FL 1
 #define _SL 2
 #define _CUSTOM 3
-#define ENTERDUAL CTL_T(KC_ENT)
+#define ENTERDUAL LT(_SL, KC_ENT)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   /* Keymap _BL: (Base Layer) Default Layer */
