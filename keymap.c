@@ -35,18 +35,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_TRNS,  KC_TRNS,  F(9),                                    KC_BTN1,                                                KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS),
 
 [_CUSTOM] = KEYMAP_ANSI(
-  F(0),      KC_1,   KC_2,   KC_3,   KC_4,   KC_5,   KC_6,   KC_7,   KC_8,     KC_9,    KC_0,    KC_MINS,  KC_EQL,   KC_BSPC, \
-  KC_TAB,    KC_Q,   KC_W,   KC_E,   KC_R,   KC_T,   KC_Y,   KC_U,   KC_LPRN,  KC_RPRN,    KC_P,    KC_LBRC,  KC_RBRC,  KC_BSLS, \
-  KC_LCTL,   KC_A,   KC_S,   KC_D,   KC_F,   KC_G,   KC_H,   KC_J,   KC_LBRC,  KC_RBRC,    KC_SCLN, KC_QUOT,            ENTERDUAL,  \
-  KC_LSFT,   KC_Z,   KC_X,   KC_C,   KC_V,   KC_B,   KC_N,   KC_M,   KC_LCBR,  KC_RCBR,  KC_SLSH,                     KC_RSFT, \
+  F(0),      KC_1  ,  KC_2,   KC_3,   KC_4,   KC_5,   KC_6,   KC_7,   KC_8,     KC_9,    KC_0,    KC_MINS,  KC_EQL,   KC_BSPC, \
+  KC_TAB,    BL_DEC,  BL_TOGG, BL_INC,   KC_R,   KC_T,   KC_Y,   KC_U,   KC_LPRN,  KC_RPRN,    KC_P,    KC_LBRC,  KC_RBRC,  KC_BSLS, \
+  KC_LCTL,   KC_A  ,  KC_S,   KC_D,   KC_F,   KC_G,   KC_H,   KC_J,   KC_LBRC,  KC_RBRC,    KC_SCLN, KC_QUOT,            ENTERDUAL,  \
+  KC_LSFT,   KC_Z  ,  KC_X,   KC_C,   KC_V,   KC_B,   KC_N,   KC_M,   KC_LCBR,  KC_RCBR,  KC_SLSH,                     KC_RSFT, \
   MO(_FL), KC_LGUI,KC_LALT,                          KC_SPC,                            KC_RALT, MO(_SL),  KC_RGUI,  KC_RCTL),
 
 [_SL] = KEYMAP_ANSI(
-  KC_GRV,  KC_F1,   KC_F2, KC_F3,   KC_F4,   KC_F5,   KC_F6,         KC_F7,           KC_F8,   KC_F9,   KC_F10,       KC_F11,  KC_F12,  KC_DEL,  \
-  KC_TRNS, KC_6,    KC_7,  KC_8, KC_9, KC_0, KC_EQL , KC_PGDN, KC_PGUP,            KC_TRNS,              LSFT(KC_END), KC_MPRV, KC_MNXT, KC_MPLY, \
-  KC_TRNS, KC_1,    KC_2,  KC_3, KC_4, KC_5, KC_MINS, KC_7,    KC_8,               KC_9,                 KC_0,      KC_TRNS,          KC_TRNS, \
-  KC_TRNS, KC_MINS, KC_EQL, BL_DEC,  BL_TOGG, BL_INC,  LSFT(KC_HOME), LCTL(LSFT(KC_LEFT)), LCTL(LSFT(KC_END)), LCTL(LSFT(KC_RIGHT)), KC_TRNS,                        RESET,   \
-  KC_TRNS, KC_TRNS, KC_TRNS,                            KC_TRNS,                                                                      KC_TRNS,      KC_TRNS, KC_TRNS, KC_TRNS),
+  KC_GRV,  KC_F1,   KC_F2,  KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  KC_DEL,  \
+  KC_TRNS, KC_6,    KC_7,   KC_8,    KC_9,    KC_0,    KC_EQL , KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_MPRV, KC_MNXT, KC_MPLY, \
+  KC_TRNS, KC_1,    KC_2,   KC_3,    KC_4,    KC_5,    KC_MINS, KC_7,    KC_8,    KC_9,    KC_0,    KC_TRNS,          KC_TRNS, \
+  KC_TRNS, KC_MINS, KC_EQL, KC_LBRC, KC_RBRC, BL_INC,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_RSFT,   \
+  KC_TRNS, KC_TRNS, KC_TRNS,                           KC_TRNS,                            KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS),
 };
 
 enum function_id {
